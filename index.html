@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пошаговая инструкция: Быстрый старт УМКа312</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      section, .section { page-break-inside: avoid; }
+    }
+    code {
+      background: #f1f5f9;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th {
+      background: #f8fafc;
+    }
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-[#333] font-sans leading-relaxed">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <!-- Шапка -->
+    <header class="py-8 text-center">
+      <h1 class="text-4xl font-bold text-[#2563eb] border-b-2 border-[#2563eb] inline-block mb-2">Быстрый старт: УМКа312</h1>
+      <p class="text-lg text-gray-600">Пошаговая инструкция для нового сотрудника по установке и настройке терминала</p>
+    </header>
+    <!-- Оглавление -->
+    <nav class="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl p-4 mb-8 no-print">
+      <div class="font-bold text-xl text-[#2563eb] mb-2"><i class="fa-solid fa-list-ul mr-2"></i>Оглавление</div>
+      <ol class="list-decimal ml-6">
+        <li><a href="#section1" class="text-[#3b82f6] hover:underline">Установка SIM-карты</a></li>
+        <li><a href="#section2" class="text-[#3b82f6] hover:underline">Подключение питания</a></li>
+        <li>
+          <a href="#section3" class="text-[#3b82f6] hover:underline">Подключение датчиков</a>
+          <ul class="list-disc ml-6">
+            <li><a href="#section3-1" class="text-[#3b82f6] hover:underline">Датчик зажигания</a></li>
+            <li><a href="#section3-2" class="text-[#3b82f6] hover:underline">Проводные ДУТ (RS-485)</a></li>
+            <li><a href="#section3-3" class="text-[#3b82f6] hover:underline">Беспроводные ДУТ (BLE)</a></li>
+          </ul>
+        </li>
+        <li><a href="#section4" class="text-[#3b82f6] hover:underline">Установка и запуск конфигуратора</a></li>
+        <li><a href="#section5" class="text-[#3b82f6] hover:underline">Подключение терминала к ПК</a></li>
+        <li><a href="#section6" class="text-[#3b82f6] hover:underline">Настройка сервера</a></li>
+        <li><a href="#section7" class="text-[#3b82f6] hover:underline">Установка терминала на транспорт</a></li>
+        <li><a href="#section8" class="text-[#3b82f6] hover:underline">Заведение объекта на сервере</a></li>
+      </ol>
+    </nav>
+    <!-- Раздел 1 -->
+    <section id="section1" class="bg-white rounded-xl shadow-md p-5 mb-8 section">
+      <h2 class="text-2xl text-[#2563eb] border-b border-gray-200 mb-4 mt-6 font-semibold">1. Установка SIM-карты</h2>
+      <div class="mb-6">
+        <div class="mb-4">
+          <img src="image/1.png" alt="Установка SIM-карты" class="rounded-lg shadow my-4 mx-auto">
+        </div>
+        <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+          <ol class="list-decimal ml-6">
+            <li>Открутите винты корпуса терминала с помощью крестовой отвертки PH1.</li>
+            <li>Осторожно снимите крышку и извлеките плату.</li>
+            <li>Установите SIM-карту в соответствующий слот.</li>
+            <li>Соберите корпус обратно.</li>
+          </ol>
+        </div>
+        <div class="bg-[#fff3cd] border-l-4 border-yellow-400 rounded px-4 py-2 my-2">
+          <i class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i>
+          <b>Внимание:</b> Убедитесь, что питание терминала отключено перед установкой SIM-карты!
+        </div>
+      </div>
+    </section>
+    <!-- Раздел 2 -->
+    <section id="section2" class="bg-white rounded-xl shadow-md p-5 mb-8 section">
+      <h2 class="text-2xl text-[#2563eb] border-b border-gray-200 mb-4 mt-6 font-semibold">2. Подключение питания</h2>
+      <div class="mb-6">
+        <img src="image/2.png" alt="Подключение питания" class="rounded-lg shadow my-4 mx-auto">
+        <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+          <ol class="list-decimal ml-6">
+            <li>Подключите терминал к источнику питания 12В.</li>
+            <li>Используйте разъем: <b>1 (красный +)</b> и <b>7 (черный -)</b> пины для подачи питания.</li>
+            <li>Убедитесь, что все модули терминала запустились.</li>
+          </ol>
+        </div>
+        <div class="bg-[#d1ecf1] border-l-4 border-cyan-400 rounded px-4 py-2 my-2">
+          <i class="fa-solid fa-circle-info text-cyan-500 mr-2"></i>
+          <b>Информация:</b> Питание по USB или от встроенной батареи недостаточно для работы всех модулей.
+        </div>
+      </div>
+    </section>
+    <!-- Раздел 3 -->
+    <section id="section3" class="bg-white rounded-xl shadow-md p-5 mb-8 section">
+      <h2 class="text-2xl text-[#2563eb] border-b border-gray-200 mb-4 mt-6 font-semibold">3. Подключение датчиков</h2>
+      <div class="mb-6">
+        <ul class="list-disc ml-6">
+          <li><a href="#section3-1" class="text-[#3b82f6] hover:underline">Датчик зажигания</a></li>
+          <li><a href="#section3-2" class="text-[#3b82f6] hover:underline">Проводные ДУТ (RS-485)</a></li>
+          <li><a href="#section3-3" class="text-[#3b82f6] hover:underline">Беспроводные ДУТ (BLE)</a></li>
+        </ul>
+      </div>
+      <!-- 3.1 -->
+      <section id="section3-1" class="mt-6">
+        <h3 class="text-xl text-[#2563eb] mb-3 font-semibold">3.1 Подключение датчика зажигания</h3>
+        <img src="image/3.png" alt="Датчик зажигания" class="rounded-lg shadow my-4 mx-auto">
+        <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+          <ol class="list-decimal ml-6">
+            <li>Синий провод (дискретный вход-выход) подключите к плюсовому проводу после замка зажигания.</li>
+          </ol>
+        </div>
+      </section>
+      <!-- 3.2 -->
+      <section id="section3-2" class="mt-6">
+        <h3 class="text-xl text-[#2563eb] mb-3 font-semibold">3.2 Подключение проводных ДУТ (RS-485)</h3>
+        <img src="image/4.png" alt="Проводные ДУТ" class="rounded-lg shadow my-4 mx-auto">
+        <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+          <ol class="list-decimal ml-6">
+            <li>Подключите до 3 датчиков уровня топлива (ДУТ) с протоколом LLS по интерфейсу RS-485.</li>
+            <li>Используйте кабель типа «витая пара».</li>
+            <li>Резистор на конце шины — 120 Ом.</li>
+            <li>Минимизируйте длину ответвлений от шины к датчикам.</li>
+            <li>Назначьте каждому устройству уникальный адрес для предотвращения коллизий.</li>
+          </ol>
+        </div>
+        <div class="bg-[#d1ecf1] border-l-4 border-cyan-400 rounded px-4 py-2 my-2">
+          <i class="fa-solid fa-circle-info text-cyan-500 mr-2"></i>
+          <b>Информация:</b> Максимум 3 проводных ДУТ на одну шину RS-485.
+        </div>
+      </section>
+      <!-- 3.3 -->
+      <section id="section3-3" class="mt-6">
+        <h3 class="text-xl text-[#2563eb] mb-3 font-semibold">3.3 Подключение беспроводных ДУТ (BLE)</h3>
+        <img src="image/5.png" alt="Беспроводные ДУТ" class="rounded-lg shadow my-4 mx-auto">
+        <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+          <ol class="list-decimal ml-6">
+            <li>В конфигураторе перейдите во вкладку <b>Система</b> → <b>Параметры Bluetooth</b>.</li>
+            <li>Выберите режим BLE: <b>ДУТы BLE</b> (BLEMODE 2) или <b>Конфигурирование и ДУТы BLE</b> (BLEMODE 3).</li>
+            <li>Запишите конфигурацию в терминал.</li>
+            <li>На вкладке <b>ДУТы BLE</b> введите MAC-адрес или используйте BLE-сканер для поиска устройств.</li>
+            <li>Поставьте галочку «Опрашивать» для начала получения данных.</li>
+            <li>Адресация беспроводных ДУТ начинается с 7.</li>
+          </ol>
+        </div>
+        <img src="image/6.png" alt="Беспроводные ДУТ" class="rounded-lg shadow my-4 mx-auto">
+        <div class="bg-[#d4edda] border-l-4 border-green-400 rounded px-4 py-2 my-2">
+          <i class="fa-solid fa-circle-check text-green-500 mr-2"></i>
+          <b>Успех:</b> Можно подключить до 4 беспроводных ДУТ одновременно.
+        </div>
+      </section>
+    </section>
+    <!-- Раздел 4 -->
+    <section id="section4" class="bg-white rounded-xl shadow-md p-5 mb-8 section">
+      <h2 class="text-2xl text-[#2563eb] border-b border-gray-200 mb-4 mt-6 font-semibold">4. Установка и запуск конфигуратора</h2>
+      <img src="image/7.png" alt="Установка конфигуратора" class="rounded-lg shadow my-4 mx-auto">
+      <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+        <ol class="list-decimal ml-6">
+          <li>Скачайте установщик ПО «Конфигуратор 3XX» с официального сайта.</li>
+          <li>Запустите скачанный файл и разрешите внесение изменений.</li>
+          <li>Выберите язык и путь установки.</li>
+          <li>При первой установке выберите опцию <b>Установить драйвер терминала</b>.</li>
+          <li>Дождитесь завершения установки и запустите конфигуратор.</li>
+        </ol>
+      </div>
+      <div class="bg-[#d1ecf1] border-l-4 border-cyan-400 rounded px-4 py-2 my-2">
+        <i class="fa-solid fa-circle-info text-cyan-500 mr-2"></i>
+        <b>Информация:</b> Для работы требуется Windows 7 или выше.
+      </div>
+    </section>
+    <!-- Раздел 5 -->
+    <section id="section5" class="bg-white rounded-xl shadow-md p-5 mb-8 section">
+      <h2 class="text-2xl text-[#2563eb] border-b border-gray-200 mb-4 mt-6 font-semibold">5. Подключение терминала к ПК</h2>
+      <img src="image/8.png" alt="Подключение терминала к ПК" class="rounded-lg shadow my-4 mx-auto">
+      <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+        <ol class="list-decimal ml-6">
+          <li>Запустите приложение «Конфигуратор УМКа3ХХ» через меню «Пуск».</li>
+          <li>Подключите терминал к ПК с помощью USB A - mini-B кабеля или через BLE.</li>
+          <li>Для BLE: нажмите «Удаленное конфигурирование», введите IMEI и пароль, нажмите «Подключиться».</li>
+        </ol>
+      </div>
+      <div class="bg-[#fff3cd] border-l-4 border-yellow-400 rounded px-4 py-2 my-2">
+        <i class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i>
+        <b>Внимание:</b> При первом запуске программа может предложить обновление — рекомендуется согласиться.
+      </div>
+    </section>
+    <!-- Раздел 6 -->
+    <section id="section6" class="bg-white rounded-xl shadow-md p-5 mb-8 section">
+      <h2 class="text-2xl text-[#2563eb] border-b border-gray-200 mb-4 mt-6 font-semibold">6. Настройка сервера</h2>
+      <img src="image/9.png" alt="Настройка сервера" class="rounded-lg shadow my-4 mx-auto">
+      <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+        <ol class="list-decimal ml-6">
+          <li>Перейдите во вкладку <b>Серверы</b> в конфигураторе.</li>
+          <li>Укажите IP-адрес или домен и порт сервера мониторинга.</li>
+          <li>Запишите конфигурацию на терминал с помощью соответствующей кнопки.</li>
+        </ol>
+      </div>
+    </section>
+    <!-- Раздел 7 -->
+    <section id="section7" class="bg-white rounded-xl shadow-md p-5 mb-8 section">
+      <h2 class="text-2xl text-[#2563eb] border-b border-gray-200 mb-4 mt-6 font-semibold">7. Установка терминала на транспортное средство</h2>
+      <img src="image/10.png" alt="Установка терминала" class="rounded-lg shadow my-4 mx-auto">
+      <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+        <ol class="list-decimal ml-6">
+          <li>Установите терминал так, чтобы антенна ГЛОНАСС/GPS была направлена вверх.</li>
+          <li>Расположите терминал на открытом месте, вдали от металлических предметов.</li>
+          <li>Используйте пластиковые стяжки или специальные разъемы для крепления проводов.</li>
+          <li>Дайте терминалу несколько минут для связи с сервером обновлений.</li>
+        </ol>
+      </div>
+      <div class="bg-[#fff3cd] border-l-4 border-yellow-400 rounded px-4 py-2 my-2">
+        <i class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i>
+        <b>Внимание:</b> Соблюдайте ориентацию устройства для корректной работы навигации!
+      </div>
+    </section>
+    <!-- Раздел 8 -->
+    <section id="section8" class="bg-white rounded-xl shadow-md p-5 mb-8 section">
+      <h2 class="text-2xl text-[#2563eb] border-b border-gray-200 mb-4 mt-6 font-semibold">8. Заведение объекта на сервере и привязка IMEI</h2>
+      <img src="image/11.png" alt="Заведение объекта на сервере" class="rounded-lg shadow my-4 mx-auto">
+      <div class="pl-4 border-l-4 border-[#3b82f6] bg-[#f8fafc] mb-5 py-2 px-3">
+        <ol class="list-decimal ml-6">
+          <li>Войдите в систему мониторинга ГЛОНАССSoft.</li>
+          <li>Перейдите в раздел <b>Объекты</b> и нажмите на иконку добавления нового объекта.</li>
+          <li>Заполните карточку объекта:
+            <ul class="list-disc ml-6">
+              <li>Имя объекта (гос.номер)</li>
+              <li>IMEI терминала</li>
+              <li>Тип устройства</li>
+              <li>Модель объекта</li>
+              <li>Подразделение (по необходимости)</li>
+              <li>Телефоны SIM1 и SIM2 (по необходимости)</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <img src="image/12.png" alt="Заведение объекта на сервере" class="rounded-lg shadow my-4 mx-auto">
+      <div class="bg-[#d4edda] border-l-4 border-green-400 rounded px-4 py-2 my-2">
+        <i class="fa-solid fa-circle-check text-green-500 mr-2"></i>
+        <b>Успех:</b> После выполнения всех шагов терминал будет готов к работе!
+      </div>
+    </section>
+    <!-- Подвал -->
+    <footer class="py-8 text-center text-gray-500 mt-8">
+      <div>© 2025 ООО «НАВИКОН». Инструкция подготовлена для сотрудников. 
+        </div>
+    </footer>
+  </div>
+</body>
+</html> 
